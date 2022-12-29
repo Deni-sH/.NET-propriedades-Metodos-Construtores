@@ -9,16 +9,19 @@ namespace Models
     {
 
         private string _nome;
+        private int _idade;
         public string Nome
         {
 
-        
+            //segunda forma.
+            get => _nome.ToUpper();
 
-         get
-            {
-                return _nome.ToUpper();
-                //retornar o nome maiusculo
-            }
+            /* primeira forma
+                     get
+                        {
+                            return _nome.ToUpper();
+                            //retornar o nome maiusculo
+                        } */
 
             set
             {
@@ -36,14 +39,29 @@ namespace Models
 
         }
 
+        public string Sobrenome { get; set; }
+        public string nomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
+        // junção utilizando valores já existentes. Usa somente o get.
+
+        public int Idade 
+        
+        {
+            get => _idade;
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException($"A idade não pode ser menor que zero");
+                }
+
+                _idade = value;
+            }
 
 
-
-
-        public int Idade { get; set; }
+        }
         public void Apresentar()
         {
-            Console.WriteLine($"Meu nome é {Nome} e tenho {Idade}.");
+            Console.WriteLine($"Meu nome é {nomeCompleto} e tenho {Idade}.");
         }
     }
 }

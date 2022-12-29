@@ -2,8 +2,9 @@
 
 Pessoa p1 = new Pessoa();
 
-p1.Idade = -1;
 
+p1.Idade = 0;
+p1.Sobrenome = "Hara";
 p1.Nome = "Denis";
 p1.Apresentar();
 
