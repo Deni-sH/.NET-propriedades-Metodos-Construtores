@@ -28,7 +28,7 @@ namespace propriedades_metodos.Models
 
         public void ListarAlunos()
         {
-            Console.WriteLine("Segue os alunos da lista");
+            Console.WriteLine($"Alunos do curso de: {Nome}"); //aparece ingles por conta das chaves.
             foreach (Pessoa aluno in Alunos)
             {
                 Console.WriteLine(aluno.nomeCompleto);

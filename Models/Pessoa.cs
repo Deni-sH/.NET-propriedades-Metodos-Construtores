@@ -51,7 +51,7 @@ namespace propriedades_metodos.Models
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException($"A idade não pode ser menor que zero");
+                    throw new ArgumentException("A idade não pode ser menor que zero");
                 }
 
                 _idade = value;
