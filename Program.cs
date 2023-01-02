@@ -1,13 +1,8 @@
 ﻿using propriedades_metodos.Models;
 
-Pessoa p1 = new Pessoa();
+Pessoa p1 = new Pessoa(nome: "Denis", sobrenome: "Hara");
+Pessoa p2 = new Pessoa(nome: "Eduardo", sobrenome: "Massuda");
 
-p1.Nome = "Denis";
-p1.Sobrenome = "Hara";
-
-Pessoa p2 = new Pessoa();
-p2.Nome = "Eduardo";
-p2.Sobrenome = "Massuda";
 
 Curso cursoDeIngles = new Curso();
 cursoDeIngles.Nome = "Ingles";

@@ -7,6 +7,21 @@ namespace propriedades_metodos.Models
 {
     public class Pessoa
     {
+        public Pessoa()
+        {
+
+        }
+        
+
+    public Pessoa(string nome, string sobrenome) //construtor mesmo nome da classe.
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+        }
+
+
+
+    
 
         private string _nome;
         private int _idade;
@@ -43,8 +58,8 @@ namespace propriedades_metodos.Models
         public string nomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
         // junção utilizando valores já existentes. Usa somente o get.
 
-        public int Idade 
-        
+        public int Idade
+
         {
             get => _idade;
             set
