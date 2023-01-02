@@ -1,5 +1,37 @@
 ﻿using propriedades_metodos.Models;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 Pessoa p1 = new Pessoa(nome: "Denis", sobrenome: "Hara");
 Pessoa p2 = new Pessoa(nome: "Eduardo", sobrenome: "Massuda");
 
@@ -11,6 +43,7 @@ cursoDeIngles.Alunos = new List<Pessoa>();
 cursoDeIngles.AdicionarAlunos(p1);
 cursoDeIngles.AdicionarAlunos(p2);
 cursoDeIngles.ListarAlunos();
+*/
 
 /*
 construtor: atribuir valores para um objeto

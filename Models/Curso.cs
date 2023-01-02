@@ -25,13 +25,17 @@ namespace propriedades_metodos.Models
         {
             return Alunos.Remove(aluno);
         }
-
+//usar o for: pois se for o foreach precisaria incrementar e gerenciar uma variável 
         public void ListarAlunos()
         {
             Console.WriteLine($"Alunos do curso de: {Nome}"); //aparece ingles por conta das chaves.
-            foreach (Pessoa aluno in Alunos)
+
+            for (int count = 0; count < Alunos.Count; count++)
             {
-                Console.WriteLine(aluno.nomeCompleto);
+                //string texto = "Nº " + count + " - " + Alunos[count].nomeCompleto;  \/ interpolação de strings.- (count +1)<-ajustedenumeração
+
+                string texto = $"Nº {count +1} - {Alunos[count].nomeCompleto}";
+                Console.WriteLine(texto);
             }
         }
 
