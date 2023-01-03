@@ -5,6 +5,44 @@ using System.Globalization;
 
 
 
+
+
+
+
+
+
+
+/* links Lucas B.
+
+https://www.c-sharpcorner.com/blogs/date-and-time-format-in-c-sharp-programming1
+
+https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/tokens/interpolated
+
+https://docs.microsoft.com/pt-br/dotnet/standard/base-types/custom-numeric-format-strings
+
+https://docs.microsoft.com/pt-br/dotnet/api/system.datetime
+
+https://riptutorial.com/csharp/example/19285/datetime-tryparseexact-string--string--iformatprovider--datetimestyles--datetime-
+
+
+
+
+Existe um outro meio de concatenar strings, em que usamos o sinal de "$". Essa concatenação é chamada de:
+R-> interpolação juntar-> ("$ {data}");
+
+
+concatenar strings = +  
+
+Podemos alterar a localização (ou cultura) do programa para que seja trabalhado dados específicos de uma cultura (por exemplo, símbolo da moeda, casas decimais, etc). Para isso, usamos a classe:
+R-> CultureInfo
+
+Para formatar um valor decimal, ou seja, colocar o símbolo de moeda, é correto usarmos o caractere:
+R-> :C
+
+
+
+
+
 // DateTime tryparse -----------------------------------------
 
 // maneira segura de conversão
