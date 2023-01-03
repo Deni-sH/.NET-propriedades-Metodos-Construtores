@@ -1,8 +1,125 @@
 ﻿using propriedades_metodos.Models;
+using System.Globalization;
 
 
 
 
+
+// DateTime tryparse -----------------------------------------
+
+// maneira segura de conversão
+
+// string dataString = "2022-13-17 18:00";
+
+// bool sucesso = DateTime.TryParseExact(dataString, 
+//                         "yyyy-MM-dd HH:mm", 
+//                         CultureInfo.InvariantCulture, 
+//                         DateTimeStyles.None, out DateTime data);
+
+                     
+
+
+// if (sucesso) {
+//     Console.WriteLine($"Conversão com sucesso! Data: {data}"); = Conversão com sucesso! Data: 17/12/2022 18:00:00
+// }
+// else {
+//     Console.WriteLine($"Error Data: {data}"); = Error Data: 01/01/0001 00:00:00
+// }
+
+
+
+// -------------------------------------DateTime
+
+
+
+/*
+//método para que mesmo se der erro ele funcione = 01/01/0001 00:00:00
+string dataString = "2022-13-17 18:00";
+
+DateTime.TryParseExact(dataString, 
+                        "yyyy-MM-dd HH:mm", 
+                        CultureInfo.InvariantCulture, 
+                        DateTimeStyles.None, out DateTime data);
+
+                        Console.WriteLine(data);
+
+
+*/
+
+
+
+// DateTime data = DateTime.Parse("17/04/2022 18:00"); = 17/04/2022 18:00:00 conversão de numero para string
+
+
+// Console.WriteLine(data);
+
+
+
+// ----------------------------
+
+// using System.Globalization;
+
+// DateTime data = DateTime.Now;    
+
+
+// Console.WriteLine(data.ToShortTimeString()); = 16:07
+
+// Console.WriteLine(data.ToShortDateString()); = 03/01/2023
+
+                                     //MM:Mês  HH ->Hora. mm->Minuto. OBS: hh minúsculo formato de 12h. 
+// Console.WriteLine(data.ToString("dd/MM/yyyy HH:mm")); = 03/01/2023 16:00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------
+ /*
+//modificar cultura do sistema. \/
+using System.Globalization;
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
+
+decimal valorMonetario = 84.40M;
+                                  //:C = Currence
+// Console.WriteLine($"{valorMonetario:C}"); 
+
+//abaixo usar outra cultura atropelando a cultura do sistema
+Console.WriteLine(valorMonetario.ToString("C", CultureInfo.CreateSpecificCulture("en-US"))); 
+
+//C-> CURRENCE/ 8-> CASAS DECIMAIS = 84,40000000
+Console.WriteLine(valorMonetario.ToString("C8")); 
+
+//Porcentagem \/ = 12,34%
+double porcentagem = .1234;
+Console.WriteLine(porcentagem.ToString("P"));
+
+
+//resultado = 34-21-35
+int numero = 341235;
+Console.WriteLine(numero.ToString("##-##-##"));
+
+*/
 
 
 
