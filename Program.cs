@@ -3,36 +3,75 @@ using System.Globalization;
 
 
 
+new ExemploExcecao().Metodo1();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------------try catch -----------------------------
+
+/*
 try
 {
-    string[] linhas = File.ReadAllLines("arquivo_Leitura.txt");
+    string[] linhas = File.ReadAllLines("arquivoLeitura.txt");
 
     foreach (string linha in linhas)
     {
         Console.WriteLine(linha);
     }
 }
+catch (DirectoryNotFoundException ex)
+{
+    Console.WriteLine("Ocorreu um erro na leitura do arquivo. Caminho da pasta não encontrado. "
+    + ex.Message); //Obs: concatenação
+}
+
+
+
 catch (FileNotFoundException ex)
 {
-    Console.WriteLine($"Ocorreu uma exceção genérica {ex.Message}");
+    Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Arquivo não encontrado. {ex.Message}");
 }
 
 catch (Exception ex)
 {
     Console.WriteLine($"Ocorreu uma exceção genérica {ex.Message}");
+}finally
+{
+    Console.WriteLine("Chegou aqui");
 }
+*/
 
 
 
 
-
-
-
-
-Console.WriteLine("Chegou aqui");
-
-
-
+// ---------------------------------------------------------------------------------------------------
 
 
 
