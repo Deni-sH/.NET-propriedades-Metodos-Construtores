@@ -3,7 +3,35 @@ using System.Globalization;
 
 
 
-new ExemploExcecao().Metodo1();
+
+
+
+
+/*
+
+ex:
+
+Para lançarmos uma exception e interromper o fluxo de nosso código, usamos uma palavra reservada, conhecida como:
+R: Throw 
+
+A chave deve ser única, caso contrario lançara uma exceção 
+
+Para lermos todas as linhas de um arquivo e retornar uma coleção de strings, podemos usar a classe File, e o seu método:
+R: File.ReadAllLines
+
+Uma coleção do tipo fila (queue) implementa uma regra específica para inserção e remoção de elementos, na qual o primeiro a entrar também é o primeiro a sair. Essa ordem é conhecida como: 
+r: FIFO first in firt out
+
+
+STACK
+LIFO
+LAST IN FIRST OUT
+
+
+Para prevermos uma exceção, usamos duas palavras reservadas, uma na qual define o escopo de execução, e a 
+outra que trata a exceção retornada. Essas palavras são:
+
+r:try/catch
 
 
 
@@ -14,6 +42,197 @@ new ExemploExcecao().Metodo1();
 
 
 
+links Lucas B.
+
+https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/concepts/collections
+
+https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic.dictionary-2
+
+https://docs.microsoft.com/pt-br/dotnet/csharp/fundamentals/exceptions
+
+
+
+//obter um valor que já existe:
+
+/*
+
+
+Dictionary<string, string> estados = new Dictionary<string, string>();
+
+estados.Add("SP", "SÃO PAULO");
+estados.Add("BA", "BAHIA");
+estados.Add("MG", "MINAS GERAIS");
+
+Console.WriteLine(estados["MG"]);
+
+//R = dotnet run
+MINAS GERAIS
+
+*/
+
+
+
+
+//verificar se uma chave já foi adicionada: Containskey()
+
+/*
+Dictionary<string, string> estados = new Dictionary<string, string>();
+
+estados.Add("SP", "SÃO PAULO");
+estados.Add("BA", "BAHIA");
+estados.Add("MG", "MINAS GERAIS");
+
+
+
+
+string chave = "BA";
+{
+    Console.WriteLine($"verificando o elemento: {chave}");
+}
+
+if (estados.ContainsKey(chave))
+
+{
+    Console.WriteLine($"Valor existente: {chave}");
+}
+else
+{
+    Console.WriteLine($"Valor inexistente. É seguro adicionar {chave}");
+}
+
+
+*/
+
+
+
+
+
+//dictionary = ele serve para quando vc tem uma chave composta e que vc precisa que
+// esses elementos sejam unicos e caso eles não sejam unicos ele adiciona uma exceção.-> não podem ser duplicados.
+
+//  <tipo 1 chave, tipo 2 valor>
+
+/*
+Dictionary<string, string> estados = new Dictionary<string, string>();
+
+estados.Add("SP", "SÃO PAULO");
+estados.Add("BA", "BAHIA");
+estados.Add("MG", "MINAS GERAIS");
+
+foreach(var item in estados)
+{
+    Console.WriteLine($"chave: {item.Key}, Valor: {item.Value}");
+}
+//Valores podem ser alterados, chaves não.
+//remover valores existentes:
+Console.WriteLine("-----------");
+estados.Remove("BA");
+estados["SP"] = "São Paulo - valor alterado";
+
+foreach(var item in estados)
+{
+    Console.WriteLine($"chave: {item.Key}, Valor: {item.Value}");
+}
+
+*/
+
+/*
+dotnet run
+chave: SP, Valor: SAO PAULO
+chave: BA, Valor: BAHIA
+chave: MG, Valor: MINAS GERAIS
+-----------
+chave: SP, Valor: SAO PAULO
+chave: MG, Valor: MINAS GERAIS
+
+
+*/
+
+
+
+
+// -------------------------------Pilhas stack-------------------------------
+
+// stack obedece a ordem LIFO LAST IN FIRST OUT. Contrário de fila
+/*
+
+Stack<int> pilha = new Stack<int>();
+
+pilha.Push(1);
+pilha.Push(2);
+pilha.Push(3);
+pilha.Push(4);
+pilha.Push(5);
+Console.WriteLine($"Removendo o elemento do topo: {pilha.Pop()}");
+
+foreach(int item in pilha)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine($"Removendo o elemento do topo: {pilha.Pop()}");
+
+pilha.Push(20);
+foreach(int item in pilha)
+{
+    Console.WriteLine(item);
+}
+
+/*
+dotnet run
+Removendo o elemento do topo: 5
+4
+3
+2
+1
+Removendo o elemento do topo: 4
+20
+3
+2
+1
+
+*/
+
+
+// Queue<int> fila = new Queue<int>();  
+
+// fila.Enqueue(2);
+// fila.Enqueue(3);
+// fila.Enqueue(4);
+// fila.Enqueue(5);
+
+
+// foreach (int item in fila)
+// {
+//     Console.WriteLine(item);
+// }
+
+/* = dotnet run
+2
+3
+4
+5
+*/
+
+
+//remover elemento
+
+// Console.WriteLine($"removendo o elemento: {fila.Dequeue()}");
+
+
+// foreach (int item in fila)
+// {
+//     Console.WriteLine(item);
+// }
+
+/* = removendo o elemento: 2
+3
+4
+5
+
+*/
+
+//OBS: Primiro que entrar sera o primeiro a sair e o ultimo que entrar sera adicionado ao final da fileira. FIFO FIRST IN FIRST OUT
 
 
 
@@ -37,9 +256,13 @@ new ExemploExcecao().Metodo1();
 // ---------------------------try catch -----------------------------
 
 /*
+Usar exceções somente em casos que fogem do padrão
+fogem de uma validação conveniente
+
+
 try
 {
-    string[] linhas = File.ReadAllLines("arquivoLeitura.txt");
+    string[] linhas = File.ReadAllLines("../Arquivos/arquivoLeitura.txt");
 
     foreach (string linha in linhas)
     {
@@ -66,9 +289,9 @@ catch (Exception ex)
 {
     Console.WriteLine("Chegou aqui");
 }
+
+
 */
-
-
 
 
 // ---------------------------------------------------------------------------------------------------
