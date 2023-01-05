@@ -40,6 +40,8 @@ Para formatar um valor decimal, ou seja, colocar o símbolo de moeda, é correto
 R-> :C
 
 
+interface: using System.Globalization;
+
 
 
 
