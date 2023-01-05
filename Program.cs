@@ -3,9 +3,33 @@ using System.Globalization;
 
 
 
+try
+{
+    string[] linhas = File.ReadAllLines("arquivo_Leitura.txt");
+
+    foreach (string linha in linhas)
+    {
+        Console.WriteLine(linha);
+    }
+}
+catch (FileNotFoundException ex)
+{
+    Console.WriteLine($"Ocorreu uma exceção genérica {ex.Message}");
+}
+
+catch (Exception ex)
+{
+    Console.WriteLine($"Ocorreu uma exceção genérica {ex.Message}");
+}
 
 
 
+
+
+
+
+
+Console.WriteLine("Chegou aqui");
 
 
 
@@ -106,7 +130,7 @@ DateTime.TryParseExact(dataString,
 
 // Console.WriteLine(data.ToShortDateString()); = 03/01/2023
 
-                                     //MM:Mês  HH ->Hora. mm->Minuto. OBS: hh minúsculo formato de 12h. 
+//MM:Mês  HH ->Hora. mm->Minuto. OBS: hh minúsculo formato de 12h. 
 // Console.WriteLine(data.ToString("dd/MM/yyyy HH:mm")); = 03/01/2023 16:00
 
 
@@ -135,13 +159,13 @@ DateTime.TryParseExact(dataString,
 
 
 // ---------------------------------------------------------------------------
- /*
+/*
 //modificar cultura do sistema. \/
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
 
 decimal valorMonetario = 84.40M;
-                                  //:C = Currence
+                                 //:C = Currence
 // Console.WriteLine($"{valorMonetario:C}"); 
 
 //abaixo usar outra cultura atropelando a cultura do sistema
