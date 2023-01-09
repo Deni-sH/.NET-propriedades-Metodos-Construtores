@@ -1,8 +1,131 @@
 ﻿using propriedades_metodos.Models;
 using System.Globalization;
 
+/*
+Links Leonardo
+
+https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/builtin-types/value-tuples
+
+https://www.macoratti.net/20/06/c_deconstr1.htm
+
+https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/operators/conditional-operator
+
+https://docs.microsoft.com/pt-br/dotnet/csharp/fundamentals/functional/deconstruct
 
 
+*/
+
+//if ternário:
+
+int numero = 15;
+bool ehPar = false;
+
+ehPar = numero % 2 == 0;
+
+Console.WriteLine($"O número {numero} é " + (ehPar ? "par" : "impar"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// int numero = 20;
+
+// if (numero % 2 == 0)
+// {
+//     Console.WriteLine($"O número é par");
+// }
+// else
+// {
+//     Console.WriteLine($"O número é impar");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Descontrutor: Uma ação inversa ao contrutor, separar de volta.
+
+// Pessoa p1 = new Pessoa("Denis", "Hara");
+
+// (string nome, string sobrenome) = p1;
+
+// Console.WriteLine($"{nome} {sobrenome}");
+
+//nome e sobrenome em variáveis separadas do tipo string.
+
+
+
+
+
+
+//Descarte _ : var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("../Arquivos/ArquivoLeitura.txt");
+
+// LeituraArquivo arquivo = new LeituraArquivo();
+// //var = acha sozinho a variável 
+// var (sucesso, linhasArquivo, QuantidadeLinhas) = arquivo.LerArquivo("../Arquivos/ArquivoLeitura.txt");
+
+// if (sucesso)
+// {
+//     Console.WriteLine("quantidade linhas do arquivo:" + QuantidadeLinhas);
+//     foreach (string linha in linhasArquivo)
+//     {
+//      Console.WriteLine(linha);
+//     }
+//     }
+//     else
+//     {
+//     Console.WriteLine("não foi possivel ler o arquivo");
+//     }
+
+
+
+
+
+
+
+//tupla
+
+/*
+//recomendada:legibilidade e nomeação de dados.
+(int Id, string Nome, string Sobrenome, decimal Altura) tupla = (1, "Denis", "Hara", 1.70M);
+
+//ambas não tem como especificar variáveis.
+// ValueTuple<int, string, string, decimal> outroExemploTupla = (1, "Denis", "Hara", 1.70M);
+// var outroExemploTuplaCreate = Tuple.Create(1, "Denis", "Hara", 1.70M);
+
+
+Console.WriteLine($"Id: {tupla.Id}");
+Console.WriteLine($"Nome: {tupla.Nome}");
+Console.WriteLine($"Sobrenome: {tupla.Sobrenome}");
+Console.WriteLine($"Altura: {tupla.Altura}");
+
+
+
+
+
+*/
+
+
+
+// -------------------------------------------------------------------------------------------------
 
 
 
