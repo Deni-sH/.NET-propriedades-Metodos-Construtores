@@ -1,6 +1,204 @@
 ﻿using propriedades_metodos.Models;
 using System.Globalization;
 
+using Newtonsoft.Json;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Links Buta->
+
+https://docs.microsoft.com/pt-br/nuget/what-is-nuget
+
+https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/concepts/serialization
+
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+
+https://codebeautify.org/jsonviewer
+
+
+
+Podemos atribuir metadados para as classes e propriedades, passando valores ou alterando seu comportamento. Isso é conhecido como:
+r: Atributos
+
+Podemos atribuir metadados para as classes e propriedades, passando valores ou alterando seu comportamento. Isso é conhecido como:
+r: Serialização
+
+Podemos compartilhar nosso código como uma solução ou melhoria em comum com outras pessoas, para 
+que elas usem em seus projetos e se beneficie dessa solução, visando o reaproveitamento de código. 
+Quando fazemos isso, estamos montando um(a):
+r: Pacote ou biblioteca.
+
+Para instalar um pacote, podemos fazer visualmente ou pela linha de comando no terminal. Pela linha de comando,
+ para instalar um pacote pelo .NET CLI devemos executar o:
+ r: dotnet add package nome_do_pacote
+
+
+
+
+/*Lidar com atributos em json:
+
+Na classe adicione:
+
+Na parte de cima
+
+Using Newtonsoft.json;
+
+Exemplo nome: "Nome_Produto": "Material de escritório",
+                [JsonProperty("Nome_Produto")]  adicionando metadata. uma instrução 
+Resp:      transformado = public string Produto { get; set; }
+                 errado = public string Nome_Produto { get; set; }
+
+
+
+
+
+*/
+
+
+
+
+/* Deserialização:
+Começar mapeando o conteudo desse arquivo em uma classe.
+DataVenda pertence ao formato ISO8601
+
+
+string conteudoArquivo = File.ReadAllText("../Arquivos/vendas.json"); //Leitura do Arquivo e armazenado na variavel conteudoArquivo.
+
+List<Venda2> listaVenda2 = JsonConvert.DeserializeObject<List<Venda2>>(conteudoArquivo);
+
+foreach (Venda2 venda in listaVenda2)
+{
+
+    Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}" + 
+                      $"Preço: {venda.Preco}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
+}
+
+
+
+
+
+
+
+
+
+
+/*
+//testar json file : https://codebeautify.org/jsonviewer
+
+DateTime dataAtual = DateTime.Now;
+
+
+List<Venda> listaVendas = new List<Venda>();
+
+Venda v1 = new Venda(1, "Material de escritório", 25.00M, dataAtual);
+Venda v2 = new Venda(2, "Licença de Software", 75.00M, dataAtual);
+
+listaVendas.Add(v1);
+listaVendas.Add(v1);
+
+string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented);
+//Serializar mais de 1 componente. uma coleção 
+
+Console.WriteLine(serializado);
+
+
+File.WriteAllText("../Arquivos/vendas.json", serializado);
+
+
+
+
+
+
+
+//string serializado = JsonConvert.SerializeObject(v1); 
+// R = dotnet run
+//{"Id":1,"Produto":"Material de escritório","Preco":25.00}
+
+//Sempre ler a documentação para saber como funciona o pacote 
+/*
+//Adicionando na string serializado = JsonConvert.SerializeObject(v1, Formatting.Indented); = 
+
+dotnet run
+{
+  "Id": 1,
+  "Produto": "Material de escritório",
+  "Preco": 25.00
+}
+
+
+
+
+
+
+
+
+
+
+// dotnet add package Newtonsoft.Json < instala sempre a ultima versão
+
+
+
+
+
+
+/* Serialização de dados:
+Se quiser transmitir esses dados para outras aplicações, ou armazenar esse estado desse objeto tem que fazer esse
+processo de serialização, que nada mais é do que vc transformar esse objeto em algo mais proximo do que
+vc deseja armazenar como: OBJETO--->BYTES---->FILE/DATABASE/MEMORY
+
+transformar objetos em um fluxo de bytes pra armazenar ou transmitir esse dado. é 
+vc tirar algo do objeto da programação e representar ele de uma outra forma pra algum
+outro destino que vc queira.
+
+Json->
+
+JavaScript Notation Object transmitir dados entre aplicações 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 Links Leonardo
 
@@ -17,20 +215,12 @@ https://docs.microsoft.com/pt-br/dotnet/csharp/fundamentals/functional/deconstru
 
 //if ternário:
 
-int numero = 15;
-bool ehPar = false;
+// int numero = 15;
+// bool ehPar = false;
 
-ehPar = numero % 2 == 0;
+// ehPar = numero % 2 == 0;
 
-Console.WriteLine($"O número {numero} é " + (ehPar ? "par" : "impar"));
-
-
-
-
-
-
-
-
+// Console.WriteLine($"O número {numero} é " + (ehPar ? "par" : "impar"));
 
 
 
