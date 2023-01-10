@@ -5,6 +5,121 @@ using Newtonsoft.Json;
 
 
 
+/*
+
+
+
+https://docs.microsoft.com/pt-br/cpp/mfc/memory-management
+
+https://www.c-sharpcorner.com/article/stack-vs-heap-memory-c-sharp
+
+https://dotnettutorials.net/lesson/stack-and-heap-dotnet
+
+https://www.codeproject.com/Articles/76153/Six-Important-NET-Concepts-Stack-Heap-Value-Types
+
+O tipo de referência armazena dados dinâmicos e complexos, e por esse motivo ele é armazenado em uma memória específica. 
+Qual é essa memória?
+r: Heap
+
+A limpeza da memória Heap não é feita de maneira tradicional, sendo assim, ela 
+depende de outro processo para realizar a sua limpeza. Qual é o nome do 
+processo que realiza essa limpeza?
+r: Garbage Collector
+
+O .NET trabalha com dois tipos de memória, onde um armazena dados estáticos e o outro armazena dados dinâmicos. E
+sses tipos de memória são conhecidos como:
+r: Stack e Heap 
+
+
+
+
+
+
+
+
+Repositório do módulo:
+https://github.com/leonardo-buta/trilha-net-exemplo-explorando-a-linguagem
+https://github.com/digitalinnovationone/trilha-net-exemplo-explorando-a-linguagem
+
+
+Documentação oficial da Microsoft:
+https://docs.microsoft.com/pt-br/dotnet/csharp
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+Pessoa p1 = new Pessoa("Denis", "Hara");
+
+Pessoa p2 = p1;
+p2.Nome = "Jose"
+dotnet run = 
+= Jose
+= Jose
+armazenam na memória stack e na heap. conta como ref. e aponta para um objeto 
+Porque valores de ref. mudam, já valores primitivos alteram
+
+int a = 10;
+
+int b = a;
+b = 60; 
+
+dotnet run =
+a = 10
+b = 60
+
+tipos primitivos 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Garbage:
+
+Terminou o método ele vai fazer a limpeza de memória, vai  finalizar de cima pra baixo LIFO, limpar a memória. na stack.
+na Heap é diferente, quem vai limpar é o Garbage Collector GC ->
+Vai limpar todos os dados da memória heap que estão sem referência 
+para uma variável em uso.
+
+Todo objeto da memória heap que nao tiver mais ref. nenhuma para a memória stack
+vai entrar no GC
+
+
+
+
+
+/*
+Stack e Heap
+
+Stack ultimo a entrar é o primeiro a sair LIFO.
+
+void Metodo()
+{                                                                                                 Tipos complexos ficam na memória heap
+                                                                    p1(ref)       --------->         p1
+int a = 5;     = tipos de valor                                                   b = 10                        (Objeto)
+int b = 10;    = tipos de valor                                                  a = 5
+
+Pessoa p1 = new Pessoa();= tipo de referência                                        Stack                          Heap
+}                                                           Tipo simples somente na Stack/  Já Objetos, classes interfaces e outros tipos
+                                                                                            complexos vão ser armazenados na Stack como
+                                                                                            referência e o objeto de verdade vai ficar na heap
 
 
 
