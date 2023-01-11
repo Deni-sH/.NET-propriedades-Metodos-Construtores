@@ -19,6 +19,12 @@ namespace propriedades_metodos.Models
             Sobrenome = sobrenome;
         }
 
+        //Desconstrutor
+        public void Deconstruct(out string nome, out string sobrenome)
+        {
+            nome = Nome;
+            sobrenome = Sobrenome;
+        }
 
 
     
