@@ -3,8 +3,115 @@ using System.Globalization;
 
 using Newtonsoft.Json;
 
-//classe generica
 
+
+
+
+for (int i = 0; i < length; i++)
+{
+    
+}
+
+
+
+
+
+
+
+
+
+
+/*
+Ao declarar um tipo de dado, o seu tipo não pode mais pode ser alterado, contudo, há uma exceção para isso. E
+ssa exceção é conhecida como:
+r: tipo dynamic
+
+Para criarmos uma classe genérica, precisamos passar um tipo entre dois símbolos. 
+A correta criação de uma classe genérica é:
+r: class NomeDaCLasse<T>
+
+Ao desserializar uma informação, nem sempre temos a certeza que virá um determinado valor, 
+ou seja, ele pode vir nulo e retornar uma exceção caso seu programa não esteja esperando. Para 
+evitar isso, podemos usar:
+r: Tipo de referência nulo
+
+Por muitas vezes queremos que nosso código seja flexível e reaproveitável para vários tipos de dados, 
+não dependendo de um tipo específico na sua construção. Esse conceito é conhecido como:
+r: Genérico
+
+Para representarmos um tipo de dado que pode ser nulo, ou seja, pode 
+epresentar o seu próprio tipo e o valor nulo, usamos o símbolo:
+r: ?
+
+Existe um tipo de dado que pode agrupar outros tipos de dados, sendo apenas leitura, não 
+sendo possível alterar seus dados após a sua declaração. Esse tipo é conhecido como:
+r: Tipos anônimos
+
+
+
+links Lucas
+
+extension-methods
+https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/extension-methods
+
+nullable-value-types
+https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/builtin-types/nullable-value-types
+
+dynamic-type
+https://www.tutorialsteacher.com/csharp/csharp-dynamic-type
+
+anonymous-type
+https://www.tutorialsteacher.com/csharp/csharp-anonymous-type
+
+generic1.htm
+https://www.macoratti.net/16/10/c_generic1.htm
+
+using-generics-with-C-Sharp/
+https://www.c-sharpcorner.com/UploadFile/84c85b/using-generics-with-C-Sharp/
+
+Métodos de extensão 
+https://www.tutorialsteacher.com/csharp/csharp-extension-method
+
+
+
+
+
+
+
+
+
+
+
+
+
+int numero = 15;
+bool par = false;
+
+par = numero.EhPar();
+string mensagem = "O número " + numero + " " + "é " + (par ? "par" : "impar");
+
+
+Console.WriteLine(mensagem);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//classe generica
+/*
 NewArray<int> arrayInteiro = new NewArray<int>();
 arrayInteiro.AdicionarElementoArray(30);
 
@@ -17,7 +124,7 @@ arrayString.AdicionarElementoArray("jucc");
 Console.WriteLine(arrayString[0]);
 
 
-
+*/
 
 /*
 
@@ -54,7 +161,7 @@ if (desejaReceberEmail.HasValue && desejaReceberEmail.Value)
 }
 else
 {
-    Console.WriteLine("OO usuário não respondeu ou optou por não receber e-mail");
+    Console.WriteLine("O usuário não respondeu ou optou por não receber e-mail");
 }
 
 

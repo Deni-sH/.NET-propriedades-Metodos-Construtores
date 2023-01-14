@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 
 namespace propriedades_metodos.Models
 {
-    public class IntExtensions
-    {
-        public static bool
-
+    public static class IntExtensions
+    {//if ternario
+        public static bool EhPar(this int numero)
+        {
+              return numero % 2 == 0; 
+        }
+           
     }
 }
