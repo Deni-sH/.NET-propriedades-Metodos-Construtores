@@ -3,6 +3,66 @@ using System.Globalization;
 
 using Newtonsoft.Json;
 
+//classe generica
+
+NewArray<int> arrayInteiro = new NewArray<int>();
+arrayInteiro.AdicionarElementoArray(30);
+
+Console.WriteLine(arrayInteiro[0]);
+
+
+NewArray<string> arrayString = new NewArray<string>();
+arrayString.AdicionarElementoArray("jucc");
+
+Console.WriteLine(arrayString[0]);
+
+
+
+
+/*
+
+dynamic variavelDinamica = 4;
+
+Console.WriteLine($"Tipo da variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica}");
+
+
+variavelDinamica = "Texto";
+
+Console.WriteLine($"Tipo da variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica}");
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+/*o ?: Significa que além de receber os valores que ele já aceita normalmente 'verdadeiro ou falso' 
+ele vai aceitar um outro tipo de valor adicional que é o nulo */
+
+bool? desejaReceberEmail = null; 
+            //Hasvalue verificar se é != de nulo,. Value = tem valor
+if (desejaReceberEmail.HasValue && desejaReceberEmail.Value)
+{
+    Console.WriteLine("O usuário optou por receber e-mail.");
+}
+else
+{
+    Console.WriteLine("OO usuário não respondeu ou optou por não receber e-mail");
+}
+
+
+
+
+
+
+
 
 
 /*
