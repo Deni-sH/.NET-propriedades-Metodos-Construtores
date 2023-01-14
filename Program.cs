@@ -438,7 +438,7 @@ Console.WriteLine($"Altura: {tupla.Altura}");
 
 
 
-    
+
 
 
 
@@ -918,10 +918,10 @@ Pessoa p1 = new Pessoa(nome: "Denis", sobrenome: "Hara");
 Pessoa p2 = new Pessoa(nome: "Eduardo", sobrenome: "Massuda");
 
 
-Curso cursoDeIngles = new Curso();
+ cursoDeIngles = new Curso();
 cursoDeIngles.Nome = "Ingles";
 cursoDeIngles.Alunos = new List<Pessoa>();
-
+Curso
 cursoDeIngles.AdicionarAlunos(p1);
 cursoDeIngles.AdicionarAlunos(p2);
 cursoDeIngles.ListarAlunos();
