@@ -4,17 +4,48 @@ using System.Globalization;
 using Newtonsoft.Json;
 
 
+/*POO abstração
+
+Nada mais é do que abstrair um objeto do mundo real para um contexto especifico
+considerando apenas os atributos importantes, ou
+abstrair um objeto do mundo real e transformar em uma representação (classe) para um 
+contexto especifico. obter algo  do mundo real e abstrair no seu sistema.
 
 
 
-for (int i = 0; i < length; i++)
-{
-    
-}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* POO
+
+É uma representação de algo do mundo real onde eu coloco as suas características e
+um objeto nada mais é do que uma implementação dessa classe.
+
+Paradigmas 
+
+Um modelo de técnicas 
+conjunto de regras 
+Uma linguagem de programação implementa um ou mais paradigmas.
+
+Programação Orientada a objetos 
+''Estruturada
+''Imperativa 
+''procedural 
+''orientada a eventos
+''lógica
 
 
 
