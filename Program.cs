@@ -181,6 +181,12 @@ Console.WriteLine($"Tipo da variável: {variavelDinamica.GetType()}, Valor: {var
 
 
 
+
+
+
+
+
+
 /*o ?: Significa que além de receber os valores que ele já aceita normalmente 'verdadeiro ou falso' 
 ele vai aceitar um outro tipo de valor adicional que é o nulo */
 
